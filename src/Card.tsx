@@ -1,15 +1,15 @@
 import './Card.css'
 import axios from 'axios'
+import { apiUrl } from './App'
 
 interface Task {
     id : String , todo : string , done : boolean 
 }
 
-const apiUrl = "https://2dwxsedttb.execute-api.us-east-1.amazonaws.com/dev/done"
 
 function markDone( task :  Task, setChange : React.Dispatch<React.SetStateAction<boolean>>  ){
 
-    axios.post(apiUrl, { id : task.id })
+    axios.post(`${apiUrl}/done`, { id : task.id })
     .then(response => {
         // Handle the successful response
             console.log('Response:', response.data);
