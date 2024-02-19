@@ -3,7 +3,7 @@ import './App.css'
 import { Card } from './Card'
 import axios from 'axios';
 
-export const apiUrl = 'https://2dwxsedttb.execute-api.us-east-1.amazonaws.com/dev/';
+export const apiUrl = 'https://91dz1vxn0f.execute-api.us-east-1.amazonaws.com/dev';
 
 function App() {
 
